@@ -142,3 +142,12 @@ ul li.checked::before {
 .edit-button:hover {
     background-color: #9f6d56;
 }
+
+@media (max-width: 768px) {
+    .addbutton{
+        padding: 25px 3px;
+    }
+    .additem{
+        padding: 18px 5px;
+    }
+}
