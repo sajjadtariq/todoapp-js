@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(77, 77, 136), rgb(70, 176, 70));
+    padding: 10px;
+}
+
+.todocontainer {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+h1 {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 45px;    
+    text-transform: uppercase;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.headrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(215, 220, 225);
+    border-radius: 40px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.additem {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 18px;
+    font-size: 20px;
+}
+
+.addbutton {
+    padding: 25px 40px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 40px;
+    background-color: rgb(194, 228, 170);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addbutton:hover {
+    background-color: rgb(165, 193, 144);
+}
+
+.taskrow {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+    font-size: 20px;
+    padding: 10px 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 0;
+    border-radius: 50px;
+    background-image: url(./Assets/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(./Assets/checked.png);
+}
+
+.delete-button,
+.edit-button {
+    background-color: #ca7046;
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    position: absolute; 
+    top: 4px;  
+    transition: background-color 0.3s ease; 
+}
+
+.delete-button{
+    right: 0;
+}
+
+.edit-button{
+    right: 90px;
+    padding: 10px 24px;
+}
+
+.delete-button:hover,
+.edit-button:hover {
+    background-color: #9f6d56; 
+}
