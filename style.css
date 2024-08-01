@@ -87,16 +87,17 @@ h1 {
 
 .item-content{
     word-break: break-word;
-    width: 70%;
+    padding-right: 50px;
 }
 
 
 li {
     list-style: none;
     font-size: 20px;
-    padding: 5px 40px;
+    padding: 9px 50px;
     position: relative;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 
