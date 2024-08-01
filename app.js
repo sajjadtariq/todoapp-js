@@ -14,11 +14,11 @@ const addItem = () => {
 
         let deleteButton = document.createElement('button');
         deleteButton.className = 'delete-button';
-        deleteButton.textContent = 'DELETE';
+        deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
         li.appendChild(deleteButton);
         let editButton = document.createElement('button');
         editButton.className = 'edit-button';
-        editButton.textContent = 'EDIT';
+        editButton.innerHTML = '<i class="fas fa-pencil-alt"></i>' ;
         li.appendChild(editButton);
         list.appendChild(li);
     }
