@@ -22,7 +22,7 @@ const addItem = () => {
         li.appendChild(editButton);
         list.appendChild(li);
     }
-    
+
     input.value = "";
     saveData();
 }
@@ -30,6 +30,10 @@ const addItem = () => {
 list.addEventListener('click', (e) => {
     if (e.target.tagName === 'LI') {
         e.target.classList.toggle('checked');
+        const editButton = e.target.querySelector('.edit-button');
+        if (editButton) {
+            editButton.style.display = editButton.style.display === 'none' ? '' : 'none';
+        }
     } else if (e.target.className === 'delete-button') {
         e.target.parentElement.remove();
         saveData();
@@ -37,9 +41,9 @@ list.addEventListener('click', (e) => {
         const liElement = e.target.parentElement;
         const spanElement = liElement.firstChild;
         console.log(spanElement);
-        const edited = prompt('Edit Your Task');
+        const edited = prompt('Edit Your Task', spanElement.textContent.trim());
         console.log(edited);
-        if (edited !== ''){
+        if (edited !== '' && edited !== null){
             spanElement.innerHTML = edited;
             saveData();
         }
